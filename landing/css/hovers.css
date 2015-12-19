@@ -1,0 +1,501 @@
+.trigger1, .trigger2, .trigger3 {
+  height: 380px;
+  width: 33.333333%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.trigger1:hover .offer-box.standard.front, .trigger2:hover .offer-box.advantage.front, .trigger3:hover  .offer-box.ultimate.front{
+  margin-bottom: -380px;
+	-moz-transition: all 1s ease-out;
+	-webkit-transition: all 1s ease-out;
+	-o-transition: all 1s ease-out;
+	transition: all 1s ease-out;
+}
+
+.trigger1:hover .offer-box.standard.back, .trigger2:hover .offer-box.advantage.back, .trigger3:hover .offer-box.ultimate.back {
+  margin-bottom: 0;
+}
+
+.trigger1.opened:hover .offer-box.standard.back, .trigger2.opened:hover .offer-box.advantage.back, .trigger3.opened:hover .offer-box.ultimate.back {
+  margin-bottom: -380px;
+}
+
+.trigger1.opened:hover .offer-box.standard.front, .trigger2.opened:hover .offer-box.advantage.front, .trigger3.opened:hover .offer-box.ultimate.front {
+  margin-bottom: 0;
+}
+
+.offer-block .offer-box.standard.front, .offer-block .offer-box.advantage.front, .offer-block .offer-box.ultimate.front {
+  position: absolute;
+	bottom: 0;
+  z-index: 2;
+  width: 100%;
+  margin-bottom: 0;
+  opacity: 1;
+}
+
+.offer-block .offer-box.standard.back, .offer-block .offer-box.advantage.back, .offer-block .offer-box.ultimate.back {
+  background: #ededec;
+  border: 13px solid #d21c27;
+  height: 380px;
+  width: auto;
+  position: absolute;
+  z-index: 1;
+  margin-bottom: -380px;
+}
+
+.offer-block .offer-box.standard.back.unopen, .offer-block .offer-box.advantage.back.unopen, .offer-block .offer-box.ultimate.back.unopen {
+  border: 13px solid #d21c27;
+}
+
+.offer-block .offer-box.standard.front.unopen .btn, .offer-block .offer-box.advantage.front.unopen .btn, .offer-block .offer-box.ultimate.front.unopen .btn {
+  bottom: 18px;
+}
+
+.offer-block .offer-box.standard.front.open .btn, .offer-block .offer-box.advantage.front.open .btn, .offer-block .offer-box.ultimate.front.open .btn {
+  bottom: 31px;
+}
+
+.offer-block .offer-box.standard.back .title, .offer-block .offer-box.advantage.back .title, .offer-block .offer-box.ultimate.back .title {
+  background: #ededec;
+  color: #666666;
+  font-size: 25px;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 30px 0 26px 0;
+}
+
+.offer-block .offer-box.standard.back p, .offer-block .offer-box.advantage.back p, .offer-block .offer-box.ultimate.back p {
+  color: #3e3d39;
+  font: 300 18px/22px "museosans", "Arial", "Helvetica", sans-serif;
+  margin: 0 auto 16px auto;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #d3d2d1;
+  width: 80%;
+}
+.offer-block .offer-box.ultimate.back p {
+  margin: 0 auto 38px auto;
+}
+.offer-block .offer-box.ultimate.front.open .offer-price {
+  margin-bottom: 20px;
+}
+.offer-block .offer-box.standard.back .action1, .offer-block .offer-box.advantage.back .action2, .offer-block .offer-box.ultimate.back .action3 {
+  color: #555555;
+	font: 500 22px/26px "museoslab", "Times New Roman", Times, serif;
+	display: block;
+  text-align: center;
+  bottom: 90px;
+  width: 100%;
+  position: absolute;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.offer-block .offer-box.standard.back .link1, .offer-block .offer-box.advantage.back .link2, .offer-block .offer-box.ultimate.back .link3 {
+  color: #126c9d;
+  font: 500 14px/18px "museosans", "Arial", "Helvetica", sans-serif;
+	display: block;
+	text-decoration: underline;
+	border-style: none !important;
+  position: absolute;
+  bottom: 70px;
+  width: 100%;
+  text-align: center;
+}
+.offer-block .offer-box.standard.back .link1:hover, .offer-block .offer-box.advantage.back .link2:hover, .offer-block .offer-box.ultimate.back .link3:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+.offer-block .offer-box.standard.back .btn, .offer-block .offer-box.advantage.back .btn, .offer-block .offer-box.ultimate.back .btn {
+	opacity: 1;
+	background: rgb(205, 25, 31);
+	color: #ffffff;
+  position: absolute;
+  width: 170px;
+  bottom: 18px;
+  height: 46px;
+  left: 50%;
+  margin: 0 0 0 -84px;
+  top: auto;
+}
+
+.offer-block .offer-box.standard.back.closed, .offer-block .offer-box.advantage.back.closed, .offer-block .offer-box.ultimate.back.closed {
+  display: none !important;
+}
+.offer-block .offer-box.standard.front.open, .offer-block .offer-box.advantage.front.open, .offer-block .offer-box.ultimate.front.open {
+  display: block !important;
+  width: auto;
+  background: #ededec;
+  border: 13px solid #d21c27;
+  border-bottom: 0;
+  opacity: 1;
+  -moz-transition: all 0s ease-out;
+	-webkit-transition: all 0s ease-out;
+	-o-transition: all 0s ease-out;
+	transition: all 0s ease-out;
+}
+.offer-block .offer-box.standard.front.open .title, .offer-block .offer-box.advantage.front.open .title, .offer-block .offer-box.ultimate.front.open .title {
+  background: #ededec;
+  border-bottom: 0;
+  font: 300 41px/44px "museoslab", "Times New Roman", Times, serif;
+  color: #ababaa;
+  text-align: left;
+  margin-left: 20px;
+  width: auto;
+  padding: 20px 0 8px 0;
+}
+.offer-block .offer-box.standard.front.open .title sup, .offer-block .offer-box.advantage.front.open .title sup, .offer-block .offer-box.ultimate.front.open .title sup {
+  font-size: 17px;
+  top: -17px;
+}
+.offer-block .offer-box.standard.front.open .offer-price .price, .offer-block .offer-box.advantage.front.open .offer-price .price, .offer-block .offer-box.ultimate.front.open .offer-price .price {
+  color: #818181;
+  font-size: 148px;
+  line-height: 112px;
+}
+.offer-block .offer-box.standard.front.open .offer-price .unit, .offer-block .offer-box.advantage.front.open .offer-price .unit, .offer-block .offer-box.ultimate.front.open .offer-price .unit {
+  color: #818181;
+  font-size: 54px;
+}
+.offer-block .offer-box.standard.front.open .offer-price .decimal, .offer-block .offer-box.advantage.front.open .offer-price .decimal, .offer-block .offer-box.ultimate.front.open .offer-price .decimal {
+  color: #818181;
+  font-size: 54px;
+  line-height: 34px;
+}
+.offer-block .offer-box.standard.front.open .offer-price .duration, .offer-block .offer-box.advantage.front.open .offer-price .duration, .offer-block .offer-box.ultimate.front.open .offer-price .duration {
+  color: #b0b0b0;
+  font-size: 14px;
+  line-height: 16px;
+}
+.offer-block .offer-box.standard.front.open .offer-price .meta, .offer-block .offer-box.advantage.front.open .offer-price .meta, .offer-block .offer-box.ultimate.front.open .offer-price .meta {
+  color: #b0b0b0;
+  font-size: 10px;
+  line-height: 14px;
+}
+.offer-block .offer-box.standard.front.open .meta .info, .offer-block .offer-box.advantage.front.open .meta .info, .offer-block .offer-box.ultimate.front.open .meta {
+  margin-top: 0;
+}
+.offer-block .offer-box.standard.front.open .meta .info, .offer-block .offer-box.advantage.front.open .meta .info, .offer-block .offer-box.ultimate.front.open .meta .info {
+  color: #b0b0b0;
+  font-size: 10px;
+  line-height: 12px;
+}
+.offer-box.standard.front.unopen {
+  border-bottom: 13px solid #d21c27;
+  border-right: 0;
+}
+.offer-box.advantage.front.unopen {
+  border-bottom: 13px solid #d21c27;
+  border-right: 0;
+}
+.offer-box.ultimate.front.unopen {
+  border-bottom: 13px solid #d21c27;
+  border-right: 0;
+}
+.chart.standard.mobile-chart {
+  display: none;
+  height: 485px;
+}
+.chart.advantage.mobile-chart {
+  display: none;
+  height: 808px;
+}
+.chart.ultimate.mobile-chart {
+  display: none;
+  height: 1337px;
+}
+.chart.standard, .chart.advantage, .chart.ultimate {
+  display: none;
+  background: #ededec;
+  border: 13px solid #d21c27;
+  border-top: 0;
+  padding: 30px;
+}
+.chart.standard .close-btn1, .chart.advantage .close-btn2, .chart.ultimate .close-btn3 {
+	color: #555555;
+	border-style: none;
+	text-transform: uppercase;
+  font-size: 14px;
+  float: right;
+  display: block;
+  cursor: pointer;
+}
+.chart .x-out {
+  border: 1px solid #555555;
+  padding: 1px 1px;
+  font-size: 10px;
+  margin-left: 7px;
+  display: block;
+  float: right;
+}
+.chart h2 {
+	font: 300 26px/47px "museoslab", "Times New Roman", Times, serif;
+	color: #555555;
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+.chart p {
+  color: #404141;
+  font: 300 16px/26px "museosans", "Arial", "Helvetica", sans-serif;
+  border-bottom: 2px solid #c5c5c4;
+  padding-bottom: 31px;
+  margin-bottom: 0;
+}
+.chart section.plan-features {
+  display: block;
+  width: 40%;
+  float: left;
+  background: #ffffff;
+}
+.chart section {
+  position: relative;
+  margin-bottom: 1em;
+  text-align: left;
+}
+.chart section.plan-features .header-row {
+  text-align: left;
+}
+.chart section.plan-features .header-row .plan-header {
+  text-align: left;
+}
+.chart section.plan-features .header-row .plan-header {
+  position: absolute;
+  padding: 0 4px 8px 20px;
+  bottom: 0;
+}
+.chart section.plan-features ul li:nth-child(odd) {
+  background: #f5f5f5;
+}
+.chart section ul li:nth-child(odd) {
+  background: #f2f2f2;
+}
+.chart section ul {
+  margin: 0;
+  padding-left: 0;
+}
+.chart section.advantage ul li:nth-child(odd) {
+  background-color: #eee9e6;
+}
+.chart section.ultimate ul li:nth-child(odd) {
+  background-color: #d8d8d8;
+}
+.chart section ul li {
+  font-family: "museosans", "Arial", "Helvetica", sans-serif;
+  font-weight: normal;
+  font-size: 0.85em;
+  line-height: 1.3em;
+  color: #666260;
+  text-align: left;
+  list-style-type: none;
+  padding: 14px 0 14px 14px;
+}
+.chart section ul li .new {
+  color: red;
+  text-transform: uppercase;
+  margin: 0;
+}
+.chart section.standard {
+  text-align: center;
+  background: #fcfcfc;
+  width: 20%;
+  float: left;
+}
+.chart .header-row {
+  height: 112px;
+  padding: 1px 0 0 0;
+  text-align: center;
+  position: relative;
+  background: #ededec;
+}
+.chart .planlogo {
+  height: 22px;
+  margin: 16px auto 0 auto;
+  padding: 0;
+}
+.chart .planlogo .logotext {
+  font-size: 1.1em;
+  color: #949493;
+  display: block;
+  font-family: "museosans", "Arial", "Helvetica", sans-serif;
+  text-transform: uppercase;
+}
+.chart .planlogo .logotext .plan-header {
+  font-family: "museosans", "Arial", "Helvetica", sans-serif;
+}
+.chart .header-row .monthly.has-cents {
+  font-size: 3.5em;
+  font-family: "museoslab", "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+.chart .header-row .monthly {
+  color: #adadad;
+  font-family: "museoslab", "Times New Roman", Times, serif;
+  float: none;
+  font-size: 3em;
+  line-height: 1;
+  letter-spacing: -8px;
+  vertical-align: top;
+}
+.chart .header-row .monthly .currency {
+  font-size: .3em;
+  letter-spacing: 0px;
+  vertical-align: top;
+  line-height: 1.5em;
+}
+.chart section .header-row .monthly .cents {
+  position: relative;
+}
+.chart .header-row .monthly.has-cents .cents {
+  display: inline-block;
+  margin-left: -8px;
+  vertical-align: top;
+}
+.chart .header-row .monthly span {
+  font-family: "museosans", "Arial", "Helvetica", sans-serif;
+  letter-spacing: normal;
+}
+.chart .header-row .monthly.has-cents .cents small {
+  font-family: "museoslab", "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: .2em;
+  margin: 0 0 10px 0px;
+  vertical-align: top;
+}
+.chart section .header-row .monthly .cents .frequency {
+  color: #c3c3c2;
+  font-size: .2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 17px;
+  right: 0;
+}
+.chart section .header-row .monthly .cents .meta {
+  color: #c3c3c2;
+  font-size: .175em;
+  font-weight: 300;
+  width: 70px;
+  text-align: left;
+  position: absolute;
+  top: 31px;
+  right: -51px;
+}
+.chart section .header-row .monthly .tax {
+  font-size: .175em;
+  line-height: normal;
+  color: #c3c3c2;
+  letter-spacing: normal;
+  display: block;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.chart section.standard ul li:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+.chart section.advantage {
+  width: 20%;
+  float: left;
+  background: #f7f4ef;
+}
+.chart section.ultimate {
+  width: 20%;
+  float: left;
+  background: #e1e1e1;
+}
+.chart .disclaimers {
+  position: relative;
+  clear: both;
+  padding-top: 20px;
+  float: none;
+}
+.chart .disclaimers small {
+  color: #373534;
+  text-align: left;
+  display: block;
+  position: relative;
+  line-height: 1.6em;
+  font-size: 0.85em;
+}
+.chart .disclaimers small a {
+  color: #373534;
+}
+
+@media only screen and (min-width: 968px) {
+  .chart section ul li {
+    padding: 14px 4px 14px 20px;
+  }
+  .chart .header-row .monthly {
+    position: relative;
+    width: inherit;
+    margin: 0;
+    text-align: center;
+    letter-spacing: -2px;
+  }
+  .chart .header-row .monthly .currency {
+    padding-left: 1em;
+  }
+  .chart .header-row .monthly.has-cents .cents small {
+    font-size: 0.3em;
+  }
+  .chart section ul li.on {
+    display: block;
+    background-image: url('../images/check.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px 20px;
+    padding: 22px 4px 22px 20px;
+  }
+  .chart section ul li.off {
+    display: block;
+    padding: 22px 4px 22px 20px;
+  }
+}
+
+/* Mobile charts */
+
+.mobile-only {
+  display: none;
+}
+
+@media only screen and (max-width: 967px) {
+  .chart section ul li {
+    padding: 14px 4px 14px 10px;
+    font-size: 0.71em;
+  }
+  .chart .header-row .monthly {
+    position: relative;
+    width: inherit;
+    margin: 0;
+    text-align: center;
+    letter-spacing: -2px;
+  }
+  .chart .header-row .monthly .currency {
+    padding-left: 1em;
+  }
+  .chart .header-row .monthly.has-cents .cents small {
+    font-size: 0.3em;
+  }
+  .chart section ul li.on {
+    display: block;
+    background-image: url('../images/check.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px 20px;
+    padding: 20px 4px 21px 20px;
+  }
+  .chart section ul li.off {
+    display: block;
+    padding: 20px 4px 21px 20px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1080px) {
+.offer-block .offer-box.standard.front.open .title, .offer-block .offer-box.advantage.front.open .title, .offer-block .offer-box.ultimate.front.open .title {
+  font-size: 39px;
+}
+@media only screen and (max-width: 1181px) {
+  .feature-block {
+    padding-bottom: 24px;
+  }
+}
